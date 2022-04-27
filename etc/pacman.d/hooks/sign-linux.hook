@@ -1,0 +1,10 @@
+# Sign new kernel
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = linux
+[Action]
+Depends = sbsigntools
+When = PostTransaction
+Exec = /usr/bin/bash /usr/local/bin/unified.sh
